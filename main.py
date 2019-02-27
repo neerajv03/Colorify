@@ -9,11 +9,11 @@ This is the main Python Server Code
 
 from flask import Flask, request, render_template
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route("/")
+@app.route("/")
 def webPageStartup():
     return render_template("home.html")
 
 if __name__ == "__main__":
-    application.run()
+    app.run()
