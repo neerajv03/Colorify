@@ -1,0 +1,13 @@
+h1 {
+    color: black;
+    text-align: center;
+  }
+
+p{
+    color: rgb(224, 57, 57);
+    text-align: center;
+}
+
+body{
+    background-color: darkgray;
+}
