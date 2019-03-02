@@ -5,51 +5,108 @@
     <title>Colorify</title>
     <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yatra+One|Ubuntu|Tangerine">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Colorify</h1>
+    <header>
+      <div class="header-top clearfix">
+        <h1 class="l-left"><a href="#home"><img width="100" height="90" src="logo.png"></a></h1>
+        <a class="l-right toggle-menu" href="#">
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
+      </div>
 
-    <h2>Application Overview</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum, 
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
+      <nav class="hide">
+        <ul id="menu">
+          <li data-menuanchor="home">
+            <a href="#home" title="Home">Home</a>
+          </li>
+          <li data-menuanchor="Application Overview">
+            <a href="#ApplicationOverview" title="Application Overview">Application Overview</a>
+          </li>
+          <li data-menuanchor="Turing Test">
+            <a href="#TuringTest" title="Turing Test">Turing Test</a>
+          </li>
+          <li data-menuanchor="Other API">
+            <a href="#OtherApi" title="Other API">Other API</a>
+          </li>
+          <li data-menuanchor="Our Algorithm">
+            <a href="#OurAlgorithm" title="Our Algorithm">Our Algorithm</a>
+          </li>
+          <li data-menuanchor="Loss Visualization">
+            <a href="#LossVisualization" title="Loss Visualization">Loss Visualization</a>
+          </li>
+          <li data-menuanchor="About">
+            <a href="#About" title="About">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <h2>Turing Test</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum, 
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
+    <div id="fullpage">
+      <section class="vertical-scrolling">
+        <h1>Colorify</h1>
+        <!--<div class="scroll-icon">-->
+        <!--<p>Jump into the last slide</p>-->
+        <!--<a href="#About" class="icon-up-open-big"></a>-->
+        <!--</div>-->
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Application Overview</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Turing Test</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Other API</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Our Algorithm</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Loss Visualization </h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>About Us</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
 
-    <h2>Other API</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum, 
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
+    </div>
 
-    <h2>Our Algorithm</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum, 
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!  
-    </p>
-
-    <h2>Loss Visualization </h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum, 
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!    
-    </p>
-
-    <h2>About Us</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum, 
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
-
+    <!-- js files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+    <script src="{{ url_for('static',    filename='js/template.js') }}"></script>
   </body>
 </html>
