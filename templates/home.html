@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yatra+One|Ubuntu|Tangerine">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
+    <!-- js files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+    <script src="{{ url_for('static',    filename='js/template.js') }}"></script>
   </head>
   <body>
     <header>
@@ -48,10 +52,7 @@
     <div id="fullpage">
       <section class="vertical-scrolling">
         <h1>Colorify</h1>
-        <!--<div class="scroll-icon">-->
-        <!--<p>Jump into the last slide</p>-->
-        <!--<a href="#About" class="icon-up-open-big"></a>-->
-        <!--</div>-->
+
       </section>
       <section class="vertical-scrolling">
         <h2>Application Overview</h2>
@@ -104,9 +105,6 @@
 
     </div>
 
-    <!-- js files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
-    <script src="{{ url_for('static',    filename='js/template.js') }}"></script>
+
   </body>
 </html>
