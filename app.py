@@ -9,13 +9,13 @@ This is the main Python Server Code
 import os
 import logging as logger
 import backend.image_upload as imageUpload
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 
 logger.basicConfig(level=logger.INFO)
 app = Flask(__name__)
  
-uploadFolder = os.path.join('static', 'uploads')
-app.config['UPLOAD_FOLDER'] = uploadFolder
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+uploadFolder = os.path.join(APP_ROOT, 'static/uploads')
 
 @app.route("/")
 def webPageStartup():
@@ -27,14 +27,11 @@ def webPageStartup():
 def uploadFile():
     logger.info("Upload File Called")
     file = request.files['image']
-    filePath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-    toWebPage = imageUpload.postUploadImage(file, filePath)
+
+    filePath =  "/".join([uploadFolder, file.filename])
+    toWebPage = imageUpload.colorifyimage(file, filePath, file.filename)
     logger.info("Image Path is %s", toWebPage)
-        # fileName = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-        # logger.info("File Name is %s", fileName )
-        # fileName = fileName.replace("\\","/")
-        # logger.info("File Name is %s", fileName )
-        # fileName = 'uploads/nee.jpg'
+
     return render_template("home.html", user_image = toWebPage)
 
 if __name__ == "__main__":
