@@ -89,23 +89,27 @@
           <form action="/uploadOtherApiImage" method="post" enctype="multipart/form-data" id="#OtherApi">
           <div  class="row">
             <div class="column">
-               
+
+                  <span class="btn btn-default btn-file">
+                    <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
+                    <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
+                  </span>
+
+            </div>
+            <div class="column">
                 <span class="btn btn-default btn-file">
-                  <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
-                  <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
+                    <img id="fromApi" src ="{{user_image}}" alt="We are processing your Image" height="300" width="400"/>
                 </span>
-            
+            </div>
+
+
           </div>
-          <div class="column">
-              <span class="btn btn-default btn-file">
-                  <img id="fromApi" src="{{ user_image }}" alt="We are fetching your image" height="300px" width="400px"/>
-                </span>
-          </div>
-          <br>
-        </div>
-          
-          <input type="submit" value="Submit to Process" class="btn btn-primary">
+
+
+          <input type="submit" id="submit" value="Submit to Process" class="btn btn-primary">
         </form>
+
+
           
       </section>
       <section class="vertical-scrolling">
