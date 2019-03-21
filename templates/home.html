@@ -1,218 +1,143 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colorify</title>
-  <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
-  <!-- Added for Image CSS -->
-  <link rel="stylesheet" href="{{ url_for('static',    filename='css/imagePreview.css') }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorify</title>
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
+    <!-- Added for Image CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/imagePreview.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yatra+One|Ubuntu|Tangerine|Playfair+Display">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
+    
+    <!-- js files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+    <script src="{{ url_for('static', filename='js/template.js') }}"></script>
+    
+    <!-- Added to Read Images for Browsing -->
+    <script src="{{ url_for('static', filename='js/imagePreview.js') }}"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-top clearfix">
+        <h1 class="l-left"><a href="#home"></a></h1>
+        <a class="l-right toggle-menu" href="#">
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
+      </div>
 
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yatra+One|Ubuntu|Tangerine|Playfair+Display">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- js files -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
-  <script src="{{ url_for('static', filename='js/template.js') }}"></script>
+      <nav class="hide">
+        <ul id="menu">
+          <li data-menuanchor="home">
+            <a href="#home" title="Home">Home</a>
+          </li>
+          <li data-menuanchor="Application Overview">
+            <a href="#ApplicationOverview" title="Application Overview">Application Overview</a>
+          </li>
+          <li data-menuanchor="Turing Test">
+              <a href="#TuringTest" title="Turing Test">Turing Test</a>
+            
+          </li>
+          <li data-menuanchor="Other API">
+            <a href="#OtherApi" title="Other API">Other API</a>
+          </li>
+          <li data-menuanchor="Our Algorithm">
+            <a href="#OurAlgorithm" title="Our Algorithm">Our Algorithm</a>
+          </li>
+          <li data-menuanchor="Loss Visualization">
+            <a href="#LossVisualization" title="Loss Visualization">Loss Visualization</a>
+          </li>
+          <li data-menuanchor="About">
+            <a href="#About" title="About">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Added to Read Images for Browsing -->
-  <script src="{{ url_for('static', filename='js/imagePreview.js') }}"></script>
-</head>
-<body>
-<header>
-  <div class="header-top clearfix">
-    <h1 class="l-left"><a href="#home"></a></h1>
-    <a class="l-right toggle-menu" href="#">
-      <i></i>
-      <i></i>
-      <i></i>
-    </a>
-  </div>
+    <div id="fullpage">
+      <section class="vertical-scrolling">
+        <h1>Colorify</h1>
 
-  <nav class="hide">
-    <ul id="menu">
-      <li data-menuanchor="home">
-        <a href="#home" title="Home">Home</a>
-      </li>
-      <li data-menuanchor="Application Overview">
-        <a href="#ApplicationOverview" title="Application Overview">Application Overview</a>
-      </li>
-      <li data-menuanchor="Turing Test">
-        <a href="#TuringTest" title="Turing Test">Turing Test</a>
-      </li>
-      <li data-menuanchor="Using Algorithmia">
-        <a href="#UsingAlgorithmia" title="Using Algorithmia API">Using Algorithmia API</a>
-      </li>
-      <li data-menuanchor="Using Open CV">
-        <a href="#UsingOpenCV" title="Using Open CV">Using Open CV</a>
-      </li>
-      <li data-menuanchor="Our Algorithm">
-        <a href="#OurAlgorithm" title="Our Algorithm">Our Algorithm</a>
-      </li>
-      <li data-menuanchor="Loss Visualization">
-        <a href="#LossVisualization" title="Loss Visualization">Loss Visualization</a>
-      </li>
-      <li data-menuanchor="About">
-        <a href="#About" title="About">About</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Application Overview</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Turing Test</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
 
-<div id="fullpage">
-  <section class="vertical-scrolling">
-    <h1 style="text-align: center">Colorify</h1>
+      <section class="vertical-scrolling">
+        <h2>Other API</h2>
+        <!-- <form id="form1" runat="server">
+            <input type='file' id="imgInp" />
+            <img id="blah" src="#" alt="your image" />
+          </form> -->
+          <form action="/uploadOtherApiImage" method="post" enctype="multipart/form-data" id="#OtherApi">
+          <div  class="row">
+            <div class="column">
 
-  </section>
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Application Overview</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
-  </section>
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Turing Test</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
-  </section>
+                  <span class="btn btn-default btn-file">
+                    <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
+                    <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
+                  </span>
 
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Using Algorithmia API</h2>
-    <!-- <form id="form1" runat="server">
-        <input type='file' id="imgInp" />
-        <img id="blah" src="#" alt="your image" />
-      </form> -->
-    <form action="/uploadOtherApiImage" method="post" enctype="multipart/form-data">
-      <div  class="row">
-        <div class="column">
-
+            </div>
+            <div class="column">
                 <span class="btn btn-default btn-file">
-                  <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
-
+                    <img id="fromApi" src ="{{user_image}}" alt="We are processing your Image" height="300" width="400"/>
                 </span>
-          <p style="margin-top: 50%; margin-left: 25%">
-            <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
-          </p>
-
-        </div>
-
-        <div class="column">
-              <span class="btn btn-default btn-file">
-                  <img id="fromApi" src="{{ user_image }}" alt="We are fetching your image" height="300px" width="400px"/>
-                </span>
-        </div>
-        <br>
-      </div>
-
-      <div style="text-align: center; margin-top: 1%">
-
-        <input type="submit" value="Submit to Process" class="btn btn-primary" >
-      </div>
-    </form>
-
-  </section>
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Using Open CV</h2>
-    <!-- <form id="form1" runat="server">
-        <input type='file' id="imgInp" />
-        <img id="blah" src="#" alt="your image" />
-      </form> -->
-    <form action="/" method="post" enctype="multipart/form-data">
-      <div  class="row">
-        <div class="column">
-
-                <span class="btn btn-default btn-file">
-                  <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
-                </span>
-          <p style="margin-top: 50%; margin-left: 25%">
-            <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
-          </p>
-
-        </div>
-        <div class="column">
-              <span class="btn btn-default btn-file">
-                  <img id="fromApi" src="{{ user_image }}" alt="We are fetching your image" height="300px" width="400px"/>
-                </span>
-        </div>
-        <br>
-      </div>
-
-      <div style="text-align: center; margin-top: 1%">
-
-        <input type="submit" value="Submit to Process" class="btn btn-primary" >
-      </div>
+            </div>
 
 
-    </form>
-
-  </section>
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Our Algorithm</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
-  </section>
-
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Loss Visualization </h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
-  </section>
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Meet the Team</h2>
-    <p style="text-align: left; margin-left: 5%">
-      Neeraj Venugopal
-    <p style="text-align: left; margin-left: 5%">
-      <a href="https://www.linkedin.com/in/neerajvenugopal/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/Neeraj-Venugopal"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/neeraj.venugopal.7"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
-
-    </p>
-    </p>
-    <p style="text-align: right; margin-right: 5%">
-      Harika Reddy Billuri
-    <p style="text-align: right; margin-right: 5%">
-
-      <a href="https://www.linkedin.com/in/harikabilluri/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/harika2506"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/harikabilluri"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
-
-    </p>
-
-    </p>
+          </div>
 
 
-    <p style="text-align: left; margin-left: 5%">
-      Sai Sree Vaishnavi Chittoori
-    <p style="text-align: left; margin-left: 5%">
-      <a href="https://www.linkedin.com/in/sri-vaishnavi/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/sriivaishnavi"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/sri.vaishnavi.94"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+          <input type="submit" id="submit" value="Submit to Process" class="btn btn-primary">
+        </form>
 
-    </p>
-    </p>
-    <p style="text-align: right; margin-right: 5%">
-      Tanmay Raoji Shinde
-    <p style="text-align: right; margin-right: 5%">
-      <a href="https://www.linkedin.com/in/tanmay-shinde-921100118/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black" ></i></a>
-      <a href="https://github.com/trshinde"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/tanmay.shinde.77"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
-    </p>
-    </p>
-  </section>
+          
+      </section>
+      <section class="vertical-scrolling">
+        <h2>Our Algorithm</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
 
-</div>
-</body>
+      <section class="vertical-scrolling">
+        <h2>Loss Visualization </h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+      <section class="vertical-scrolling">
+        <h2>About Us</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
+          atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+        </p>
+      </section>
+
+    </div>
+  </body>
 </html>
