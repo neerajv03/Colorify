@@ -9,7 +9,7 @@ from Algorithmia.acl import ReadAcl, AclType
 from PIL import Image
 import io
 
-
+# https://demos.algorithmia.com/colorize-photos/
 
 # Authenticate with your API key
 apiKey = "simwoLLSO25EL5rwWl7DSjlsXTu1"
@@ -34,13 +34,13 @@ nlp_directory.get_permissions().read_acl == AclType.private # True
 resultFolder = os.path.join('static', 'result')
 
 
-def postUploadImage(uploadImage, uploadImagePath):
-    logger.info("In this post Upload Image")
-    uploadImage.save(uploadImagePath)
-    logger.info("Leaving the function")
+# def postUploadImage(uploadImage, uploadImagePath):
+#     logger.info("In this post Upload Image")
+#     uploadImage.save(uploadImagePath)
+#     logger.info("Leaving the function")
 
-    fileName = os.path.join(resultFolder, 'nee.jpg')
-    return fileName
+#     fileName = os.path.join(resultFolder, 'nee.jpg')
+#     return fileName
 
 
 def colorifyimage(file,filepath,filename):
@@ -66,7 +66,7 @@ def colorifyimage(file,filepath,filename):
 
         # saving the colored image to the result directory in static folder
         result = os.path.join(resultFolder, filename)
-        print(result);
+        print(result)
         img.save(result)
 
     return result
