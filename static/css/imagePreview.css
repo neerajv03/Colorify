@@ -61,6 +61,18 @@ label {
     padding: 15px;
     font-family: 'Playfair Display', serif;
 }
+
+#fromOpenCv{
+    object-fit: cover;
+    border-radius: 8px;
+    border: wheat;
+    float: left;
+    border-width: thin ;
+    border: 5px solid;
+    padding: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
 submit {
     display: block;
 }

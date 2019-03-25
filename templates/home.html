@@ -45,7 +45,7 @@
         <a href="#UsingAlgorithmia" title="Using Algorithmia API">Using Algorithmia API</a>
       </li>
       <li data-menuanchor="Using Open CV">
-        <a href="#UsingOpenCV" title="Using Open CV">Using Open CV</a>
+        <a href="#UsingOpenCV" title="Open CV">Using Open CV</a>
       </li>
       <li data-menuanchor="Our Algorithm">
         <a href="#OurAlgorithm" title="Our Algorithm">Our Algorithm</a>
@@ -83,18 +83,17 @@
   </section>
 
   <section class="vertical-scrolling">
-    <h2 style="text-align: center">Using Algorithmia API</h2>
+    <h2 style="text-align: center">Algorithmia API</h2>
     <!-- <form id="form1" runat="server">
         <input type='file' id="imgInp" />
         <img id="blah" src="#" alt="your image" />
       </form> -->
-    <form action="/uploadOtherApiImage" method="post" enctype="multipart/form-data">
+    <form action="/algorithmiaApi" method="post" enctype="multipart/form-data">
       <div  class="row">
         <div class="column">
 
                 <span class="btn btn-default btn-file">
                   <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
-
                 </span>
           <p style="margin-top: 50%; margin-left: 25%">
             <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
@@ -118,26 +117,26 @@
 
   </section>
   <section class="vertical-scrolling">
-    <h2 style="text-align: center">Using Open CV</h2>
+    <h2 style="text-align: center">Open CV</h2>
     <!-- <form id="form1" runat="server">
         <input type='file' id="imgInp" />
         <img id="blah" src="#" alt="your image" />
       </form> -->
-    <form action="/" method="post" enctype="multipart/form-data">
+    <form action="/openCvMethod" method="post" enctype="multipart/form-data">
       <div  class="row">
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
+                  <img id="blah1"  alt="Upload your Image" height="300px" width="400px"/>
                 </span>
           <p style="margin-top: 50%; margin-left: 25%">
-            <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
+            <input type='file' value="Choose File" onchange='readURL1(this);' name="openCVImage"/>
           </p>
 
         </div>
         <div class="column">
               <span class="btn btn-default btn-file">
-                  <img id="fromApi" src="{{ user_image }}" alt="We are fetching your image" height="300px" width="400px"/>
+                  <img id="fromOpenCv" src="{{ image_opencv }}" alt="We are fetching your image" height="300px" width="400px"/>
                 </span>
         </div>
         <br>

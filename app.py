@@ -8,7 +8,8 @@ This is the main Python Server Code
 # Using Flask framework and not Django :P
 import os
 import logging as logger
-import backend.image_upload as imageUpload
+import backend.usingAlgorithmiaApi as usingAlgorithmiaApi
+import backend.usingOpenCVMethod as usingOpenCVMethod
 from flask import Flask, request, render_template, jsonify
 
 logger.basicConfig(level=logger.INFO)
@@ -20,19 +21,27 @@ uploadFolder = os.path.join(APP_ROOT, 'static/uploads')
 @app.route("/")
 def webPageStartup():
     logger.info("Process Start")
-    #full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'nee.jpg')
     return render_template("home.html")
 
-@app.route("/uploadOtherApiImage", methods=['POST'])
-def uploadFile():
-    logger.info("Upload File Called")
+@app.route("/algorithmiaApi", methods=['POST'])
+def callAlgorithmiaApi():
+    logger.info("Algorithmia API Called")
     file = request.files['image']
 
     filePath =  "/".join([uploadFolder, file.filename])
-    toWebPage = imageUpload.colorifyimage(file, filePath, file.filename)
+    toWebPage = usingAlgorithmiaApi.colorifyimage(file, filePath, file.filename)
     logger.info("Image Path is %s", toWebPage)
 
     return render_template("home.html", user_image = toWebPage)
+
+@app.route("/openCvMethod", methods=['POST'])
+def callOpenCvMethod():
+    print("Inside Open CV REST CALL")
+    logger.info("Open CV method Called")
+    file = request.files['openCVImage']
+    filePath =  "/".join([uploadFolder, file.filename])
+    toWebPage = usingOpenCVMethod.openCvCaller(file, filePath, file.filename)
+    return render_template("home.html", image_opencv = toWebPage)
 
 if __name__ == "__main__":
     app.run(debug=False, use_evalex=False)
