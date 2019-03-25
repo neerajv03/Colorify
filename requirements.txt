@@ -1,9 +1,6 @@
 alabaster==0.7.12
 algorithmia==1.1.4
 algorithmia-api-client==1.0.1
-anaconda-client==1.7.2
-anaconda-navigator==1.9.6
-anaconda-project==0.8.2
 asn1crypto==0.24.0
 astroid==2.1.0
 astropy==3.1
@@ -157,7 +154,6 @@ pytest-remotedata==0.3.1
 python-dateutil==1.5
 pytz==2018.7
 PyWavelets==1.0.1
-PyYAML==3.13
 pyzmq==17.1.2
 QtAwesome==0.5.3
 qtconsole==4.4.3
