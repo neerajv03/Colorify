@@ -4,4 +4,3 @@ libfontconfig1
 libice6
 libopencv-dev
 python3-opencv
-caffe-cpu
