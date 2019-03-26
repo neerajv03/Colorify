@@ -44,8 +44,15 @@ def usingOpenCVMethod(filepath, fileName):
 
     # Specify the paths for the 2 model files
     protoFile = "backend/models/colorization_deploy_v2.prototxt"
-    weightsFile = "backend/models/colorization_release_v2.caffemodel"
-    #weightsFile = "./models/colorization_release_v2_norebal.caffemodel"
+    #weightsFile = "backend/models/colorization_release_v2.caffemodel"
+    weightsFile = "backend/models/colorization_release_v2_norebal.caffemodel"
+
+    logger.info(os.path)
+    logger.info("Is Protofile Present in Path: %s", protoFile)
+    logger.info(os.path.isfile(protoFile))
+
+    logger.info("Is Wrights File Present in Path: %s", weightsFile)
+    logger.info(os.path.isfile(weightsFile))
 
     # Load the cluster centers
     pts_in_hull = np.load('backend/pts_in_hull.npy')
