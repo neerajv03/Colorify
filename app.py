@@ -11,12 +11,16 @@ import logging as logger
 import backend.usingAlgorithmiaApi as usingAlgorithmiaApi
 import backend.usingOpenCVMethod as usingOpenCVMethod
 from flask import Flask, request, render_template, jsonify
+import subprocess
+
+
 
 logger.basicConfig(level=logger.INFO)
 app = Flask(__name__)
- 
+
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 uploadFolder = os.path.join(APP_ROOT, 'static/uploads')
+
 
 @app.route("/")
 def webPageStartup():
@@ -36,6 +40,8 @@ def callAlgorithmiaApi():
 
 @app.route("/openCvMethod", methods=['POST'])
 def callOpenCvMethod():
+    modelPath = "/".join([APP_ROOT,"getModels.sh"]);
+    subprocess.call(modelPath, shell=True)
     print("Inside Open CV REST CALL")
     logger.info("Open CV method Called")
     file = request.files['openCVImage']
