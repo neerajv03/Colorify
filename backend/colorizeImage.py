@@ -55,7 +55,7 @@ def usingOpenCVMethod(filepath, fileName):
     logger.info(os.path.isfile(weightsFile))
 
     # Load the cluster centers
-    pts_in_hull = np.load('backend/pts_in_hull.npy')
+    pts_in_hull = np.load('pts_in_hull.npy')
 
     # Read the network into Memory
     net = cv.dnn.readNetFromCaffe(protoFile, weightsFile)
@@ -94,3 +94,4 @@ def usingOpenCVMethod(filepath, fileName):
 
     result = os.path.join(resultFolder, fileName)
     return result
+
