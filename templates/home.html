@@ -51,8 +51,8 @@
       <li data-menuanchor="Using Open CV">
         <a href="#UsingOpenCV" title="Open CV">Using Open CV</a>
       </li>
-      <li data-menuanchor="Our Algorithm">
-        <a href="#OurAlgorithm" title="Our Algorithm">Our Algorithm</a>
+      <li data-menuanchor="Tensor Flow">
+        <a href="#TensorFlow" title="Tensor Flow">Tensor Flow</a>
       </li>
       <li data-menuanchor="Loss Visualization">
         <a href="#LossVisualization" title="Loss Visualization">Loss Visualization</a>
@@ -97,7 +97,7 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
+                  <img id="blah" src="{{ input_image }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
           <p style="margin-top: 50%; margin-left: 25%">
             <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
@@ -131,7 +131,7 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah1"  alt="Upload your Image" height="300px" width="400px"/>
+                  <img id="blah1" src="{{ input_image1 }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
           <p style="margin-top: 50%; margin-left: 25%">
             <input type='file' value="Choose File" onchange='readURL1(this);' name="openCVImage"/>
@@ -156,12 +156,34 @@
 
   </section>
   <section class="vertical-scrolling">
-    <h2 style="text-align: center">Our Algorithm</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
+    <h2 style="text-align: center">Tensor Flow</h2>
+    <form action="/tensorflowmethod" method="post" enctype="multipart/form-data">
+      <div  class="row">
+        <div class="column">
+
+                <span class="btn btn-default btn-file">
+                  <img id="blah2"  alt="Upload your Image" height="300px" width="400px"/>
+                </span>
+          <p style="margin-top: 50%; margin-left: 25%">
+            <input type='file' value="Choose File" onchange='readURL2(this);' name="tensorFlowImage"/>
+          </p>
+
+        </div>
+        <div class="column">
+              <span class="btn btn-default btn-file">
+                  <img id="fromtensorflow" src="{{ image_tensorflow }}" alt="We are fetching your image" height="300px" width="400px"/>
+                </span>
+        </div>
+        <br>
+      </div>
+
+      <div style="text-align: center; margin-top: 1%">
+
+        <input type="submit" value="Submit to Process" class="btn btn-primary" >
+      </div>
+
+
+    </form>
   </section>
 
   <section class="vertical-scrolling">
@@ -178,8 +200,8 @@
       Neeraj Venugopal
     <p style="text-align: left; margin-left: 5%">
       <a href="https://www.linkedin.com/in/neerajvenugopal/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/Neeraj-Venugopal"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/neeraj.venugopal.7"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/Neeraj-Venugopal"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/neeraj.venugopal.7"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
     </p>
@@ -188,8 +210,8 @@
     <p style="text-align: right; margin-right: 5%">
 
       <a href="https://www.linkedin.com/in/harikabilluri/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/harika2506"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/harikabilluri"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/harika2506"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/harikabilluri"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
 
@@ -200,8 +222,8 @@
       Sai Sree Vaishnavi Chittoori
     <p style="text-align: left; margin-left: 5%">
       <a href="https://www.linkedin.com/in/sri-vaishnavi/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/sriivaishnavi"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/sri.vaishnavi.94"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/sriivaishnavi"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/sri.vaishnavi.94"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
     </p>
@@ -209,8 +231,8 @@
       Tanmay Raoji Shinde
     <p style="text-align: right; margin-right: 5%">
       <a href="https://www.linkedin.com/in/tanmay-shinde-921100118/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black" ></i></a>
-      <a href="https://github.com/trshinde"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/tanmay.shinde.77"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/trshinde"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/tanmay.shinde.77"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
     </p>

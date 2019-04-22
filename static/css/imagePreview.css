@@ -3,23 +3,23 @@ img{
     border-radius: 8px;
     border: wheat;
     float: left;
-    border-width: thin ;    
+    border-width: thin ;
     border: 5px solid;
     padding: 15px;
     font-family: 'Playfair Display', serif;
-  }
-  /* * {
-    box-sizing: border-box;
-  } */
+}
+/* * {
+  box-sizing: border-box;
+} */
 
 .row {
     display: flex;
-  }
-  
+}
+
 .column {
     flex: 33.33%;
     padding: 5px;
-  }
+}
 
 #column input{
     /* display: inline-block;
