@@ -21,6 +21,13 @@
 
   <!-- Added to fix favicon.ico 404 Error, from Stack Overflow -->
   <link rel="shortcut icon" href="">
+  {% if scrollToAnchor %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.location.hash = '#{{ scrollToAnchor }}';
+    });
+  </script>
+  {% endif %}
 
 </head>
 <body>

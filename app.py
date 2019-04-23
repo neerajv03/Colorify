@@ -11,7 +11,7 @@ import logging as logger
 import backend.usingAlgorithmiaApi as usingAlgorithmiaApi
 import backend.usingOpenCVMethod as usingOpenCVMethod
 import backend.usingTensorFlow as usingTensorFlow
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify, redirect, url_for
 import subprocess
 
 
@@ -40,7 +40,8 @@ def callAlgorithmiaApi():
     logger.info("Image Path is %s", toWebPage)
     inputFolder = os.path.join('static', 'uploads')
     input_image = os.path.join(inputFolder, os.path.split(filePath)[1])
-    return render_template("home.html", user_image = toWebPage, input_image = input_image)
+    logger.info("input: "+input_image)
+    return render_template("home.html", scrollToAnchor="UsingAlgorithmia", user_image = toWebPage, input_image = input_image)
 
 @app.route("/openCvMethod", methods=['POST'])
 def callOpenCvMethod():
@@ -58,9 +59,8 @@ def callOpenCvMethod():
     input_image = os.path.join(inputFolder, os.path.split(filePath)[1])
     print("input: "+input_image)
     print("output: "+toWebPage)
+    return render_template("home.html",scrollToAnchor="UsingOpenCV", image_opencv = toWebPage, input_image1 = input_image)
 
-
-    return render_template("home.html", image_opencv = toWebPage, input_image1 = input_image)
 
 
 @app.route("/tensorflowmethod", methods=['POST'])

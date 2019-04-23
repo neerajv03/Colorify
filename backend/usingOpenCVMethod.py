@@ -14,5 +14,5 @@ def openCvCaller(file, filePath, fileName):
     logger.info(filePath)
     logger.info(fileName)
     logger.info(file)
-    #file.save(filepath)
+    file.save(filePath)
     return colorizeImage.usingOpenCVMethod(filePath, fileName)
