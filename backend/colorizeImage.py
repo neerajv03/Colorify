@@ -43,9 +43,9 @@ def usingOpenCVMethod(filepath, fileName):
     frame = cv.imread(filepath)
 
     # Specify the paths for the 2 model files
-    protoFile = "backend/models/colorization_deploy_v2.prototxt"
-    weightsFile = "backend/models/colorization_release_v2.caffemodel"
-    #weightsFile = "backend/models/colorization_release_v2_norebal.caffemodel"
+    protoFile = "models/colorization_deploy_v2.prototxt"
+    #weightsFile = "models/colorization_release_v2.caffemodel"
+    weightsFile = "models/colorization_release_v2_norebal.caffemodel"
 
     logger.info(os.path)
     logger.info("Is Protofile Present in Path: %s", protoFile)
@@ -55,7 +55,7 @@ def usingOpenCVMethod(filepath, fileName):
     logger.info(os.path.isfile(weightsFile))
 
     # Load the cluster centers
-    pts_in_hull = np.load('backend/pts_in_hull.npy')
+    pts_in_hull = np.load('pts_in_hull.npy')
 
     # Read the network into Memory
     net = cv.dnn.readNetFromCaffe(protoFile, weightsFile)
@@ -94,3 +94,4 @@ def usingOpenCVMethod(filepath, fileName):
 
     result = os.path.join(resultFolder, fileName)
     return result
+

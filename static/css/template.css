@@ -3,13 +3,13 @@ h1 {
     font-family:  'Tangerine', serif;
     font-size: 150px;
     text-shadow: 4px 4px 4px #aaa;
-  }
+}
 
 h2 {
     text-align: left;
     font-family: 'Yatra One', cursive;
     font-size: 48px;
-    
+
 }
 
 p {
@@ -84,13 +84,13 @@ ul, li {
 }
 
 /*h1 {*/
-    /*line-height: 40px;*/
-    /*height: 40px;*/
+/*line-height: 40px;*/
+/*height: 40px;*/
 /*}*/
 
 /*h1 a {*/
-    /*display: block;*/
-    /*padding: 0 10px;*/
+/*display: block;*/
+/*padding: 0 10px;*/
 /*}*/
 
 .toggle-menu {
