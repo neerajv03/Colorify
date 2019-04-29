@@ -58,8 +58,10 @@ def callOpenCvMethod():
     inputFolder = os.path.join('static', 'uploads')
     input_image = os.path.join(inputFolder, os.path.split(filePath)[1])
     print("input: "+input_image)
-    print("output: "+toWebPage)
-    return render_template("home.html",scrollToAnchor="UsingOpenCV", image_opencv = toWebPage, input_image1 = input_image)
+    print("output: "+toWebPage[0])
+    print("graph: "+toWebPage[1])
+
+    return render_template("home.html",scrollToAnchor="UsingOpenCV", image_opencv = toWebPage[0], input_image1 = input_image, histogram_open_cv = toWebPage[1])
 
 
 

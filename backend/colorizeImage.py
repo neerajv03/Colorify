@@ -9,9 +9,11 @@ import argparse
 import os
 import os.path
 import logging as logger
+import matplotlib.pyplot as plt
 logger.basicConfig(level=logger.INFO)
 
 resultFolder = os.path.join('static', 'result')
+histFolder = os.path.join('static', 'graphs')
 """
  citation
  This Section of the code is in refrence to the link from learnopencv from github
@@ -93,5 +95,20 @@ def usingOpenCVMethod(filepath, fileName):
     # logger.info(outputFile)
 
     result = os.path.join(resultFolder, fileName)
-    return result
+
+    img = cv.imread(filepath,1)
+    hist = cv.calcHist([img],[0],None,[256],[0,256])
+    plt.plot(hist)
+    plt.xlim([0,256])
+    img1 = cv.imread(result,1)
+    histr = cv.calcHist([img1],[0],None,[256],[0,256])
+    plt.plot(histr)
+    plt.xlim([0,256])
+    plt.savefig("static/graphs/histogram_open_cv.png")
+    hist_image = os.path.join(histFolder, "histogram_open_cv.png")
+    res_list = []
+    res_list.append(result)
+    res_list.append(hist_image)
+
+    return res_list
 

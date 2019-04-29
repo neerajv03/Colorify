@@ -46,17 +46,17 @@
       <li data-menuanchor="home">
         <a href="#home" title="Home">Home</a>
       </li>
-      <li data-menuanchor="Application Overview">
-        <a href="#ApplicationOverview" title="Application Overview">Application Overview</a>
-      </li>
+      <!--<li data-menuanchor="Application Overview">-->
+        <!--<a href="#ApplicationOverview" title="Application Overview">Application Overview</a>-->
+      <!--</li>-->
       <li data-menuanchor="Turing Test">
         <a href="#TuringTest" title="Turing Test">Turing Test</a>
       </li>
       <li data-menuanchor="Using Algorithmia">
-        <a href="#UsingAlgorithmia" title="Using Algorithmia API">Using Algorithmia API</a>
+        <a href="#UsingAlgorithmia" title="Using Algorithmia API">Algorithmia API</a>
       </li>
       <li data-menuanchor="Using Open CV">
-        <a href="#UsingOpenCV" title="Open CV">Using Open CV</a>
+        <a href="#UsingOpenCV" title="Open CV">Open CV</a>
       </li>
       <li data-menuanchor="Tensor Flow">
         <a href="#TensorFlow" title="Tensor Flow">Tensor Flow</a>
@@ -76,14 +76,14 @@
     <h1 style="text-align: center">Colorify</h1>
 
   </section>
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Application Overview</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
-  </section>
+  <!--<section class="vertical-scrolling">-->
+    <!--<h2 style="text-align: center">Application Overview</h2>-->
+    <!--<p>-->
+      <!--Lorem, ipsum dolor sit amet consectetur adipisicing elit.-->
+      <!--Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,-->
+      <!--atque facere dolore repellendus fuga, tempora numquam ea a est ratione!-->
+    <!--</p>-->
+  <!--</section>-->
   <section class="vertical-scrolling">
     <h2 style="text-align: center">Turing Test</h2>
     <p>
@@ -114,6 +114,7 @@
 
         <div class="column">
               <span class="btn btn-default btn-file">
+
                   <img id="fromApi" src="{{ user_image }}" alt="We are fetching your image" height="300px" width="400px"/>
                 </span>
         </div>
@@ -147,8 +148,14 @@
         </div>
         <div class="column">
               <span class="btn btn-default btn-file">
+
                   <img id="fromOpenCv" src="{{ image_opencv }}" alt="We are fetching your image" height="300px" width="400px"/>
-                </span>
+
+
+
+              </span>
+
+
         </div>
         <br>
       </div>
@@ -169,7 +176,7 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah2"  alt="Upload your Image" height="300px" width="400px"/>
+                  <img id="blah2" src="{{ input_image2 }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
           <p style="margin-top: 50%; margin-left: 25%">
             <input type='file' value="Choose File" onchange='readURL2(this);' name="tensorFlowImage"/>
@@ -195,11 +202,15 @@
 
   <section class="vertical-scrolling">
     <h2 style="text-align: center">Loss Visualization </h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
+    <div class="row">
+      <div class="column">
+        <p style="margin-left: 8%">Histogram Comparison</p>
+        <span class="btn btn-default btn-file">
+          <img id="hist" src="{{ histogram_open_cv }}" alt="Processing the Metrics" height="300px" width="400px"/>
+        </span>
+
+      </div>
+    </div>
   </section>
   <section class="vertical-scrolling">
     <h2 style="text-align: center">Meet the Team</h2>

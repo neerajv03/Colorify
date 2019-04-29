@@ -3,37 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2aeb3f65-8306-4037-b80c-4f12602b3a2a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/usingOpenCVMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/usingOpenCVMethod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/imagePreview.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/imagePreview.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/GNS-LAB1-(011541907).PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/_colorized_open_cvsample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/butterfly.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/colorized_open_cv_5PMe5hr8tjSS9Nq5d6Cebe-970-80.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/colorized_open_cv_butterfly.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/colorized_open_cv_download.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/colorized_open_cv_fox.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/colorized_open_cv_nee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/colorized_open_cv_sample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/colorized_open_cvfox.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/download.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/download.jpeg_colorized_open_cv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/fox.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/fox.jpeg_colorized_open_cv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result/sample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/5PMe5hr8tjSS9Nq5d6Cebe-970-80.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/GNS-LAB1-(011541907).PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/IMG_0082.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/butterfly.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/download.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/fox.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/nee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/uploads/sample.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/colorizeImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/colorizeImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getModels.sh" beforeDir="false" afterPath="$PROJECT_DIR$/getModels.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/template.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/GNS-LAB1-(011541907).PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/ansel_colorado_1941.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/nee.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,27 +24,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/template.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="109" selection-start-line="24" selection-start-column="109" selection-end-line="24" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/imagePreview.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/template.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="421">
               <caret line="220" selection-start-line="220" selection-end-line="220" />
             </state>
           </provider>
@@ -79,20 +35,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/imagePreview.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="21" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+            <state relative-caret-position="411">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#form#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -104,6 +59,7 @@
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#form#0;n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#form#0;n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#section#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,31 +77,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/colorizeImage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="1095">
+              <caret line="107" column="65" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/usingAlgorithmiaApi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getModels.sh">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+            <state relative-caret-position="337">
+              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/getModels.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="164" selection-start-line="2" selection-start-column="164" selection-end-line="2" selection-end-column="164" />
             </state>
           </provider>
         </entry>
@@ -165,7 +116,6 @@
       <list>
         <option value="$PROJECT_DIR$/backend/image_upload.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/backend/colorizeImage.py" />
         <option value="$PROJECT_DIR$/backend/colorizeImagetf.py" />
         <option value="$PROJECT_DIR$/backend/usingAlgorithmiaApi.py" />
         <option value="$PROJECT_DIR$/backend/usingTensorFlow.py" />
@@ -173,9 +123,11 @@
         <option value="$PROJECT_DIR$/static/js/imagePreview.js" />
         <option value="$PROJECT_DIR$/static/js/template.js" />
         <option value="$PROJECT_DIR$/backend/usingOpenCVMethod.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/static/css/imagePreview.css" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/backend/colorizeImage.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/getModels.sh" />
       </list>
     </option>
   </component>
@@ -211,6 +163,11 @@
             <path>
               <item name="Colorify" type="b2602c69:ProjectViewProjectNode" />
               <item name="Colorify" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Colorify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Colorify" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -218,6 +175,12 @@
               <item name="Colorify" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Colorify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Colorify" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="graphs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Colorify" type="b2602c69:ProjectViewProjectNode" />
@@ -297,7 +260,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29557000" />
+    <option name="totallyTimeSpent" value="35382000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -309,9 +272,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="56" width="1440" height="806" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -322,7 +285,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913166" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32913166" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3809524" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -382,22 +345,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/template.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="109" selection-start-line="24" selection-start-column="109" selection-end-line="24" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/usingOpenCVMethod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/colorizeImage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="255">
+          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -408,16 +357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getModels.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/imagePreview.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -425,27 +364,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/template.css">
+    <entry file="file://$PROJECT_DIR$/hist.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/graphs/histogram2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/graphs/histogram1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
+          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
           <caret line="220" selection-start-line="220" selection-end-line="220" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/imagePreview.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/usingOpenCVMethod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+        <state relative-caret-position="411">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#form#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -457,7 +418,25 @@
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#form#0;n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#form#0;n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#section#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#section#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/graphs/histogram_open_cv.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/colorizeImage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="107" column="65" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getModels.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="164" selection-start-line="2" selection-start-column="164" selection-end-line="2" selection-end-column="164" />
         </state>
       </provider>
     </entry>
