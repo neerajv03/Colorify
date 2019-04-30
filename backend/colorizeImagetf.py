@@ -54,11 +54,11 @@ def usingTensorFlow(filepath, fileName):
     output = model.predict(color_me)
     output = output * 128
 
-    for i in range(len(output)):
-        cur = np.zeros((256, 256, 3))
-        cur[:,:,0] = color_me[i][:,:,0]
-        cur[:,:,1:] = output[i]
-        imsave("static/result/colorized_tf_"+fileName, lab2rgb(cur))
+    cur = np.zeros((256, 256, 3))
+    cur[:,:,0] = color_me[0][:,:,0]
+    cur[:,:,1:] = output[0]
+    imsave("static/result/colorized_tf_"+fileName, lab2rgb(cur))
+
     outputFile = 'static/result/' + 'colorized_tf_' + fileName
     logger.info('Colorized image saved as '+ outputFile)
     fileName = outputFile.split('/')[2]
