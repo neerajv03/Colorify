@@ -45,6 +45,7 @@ def callAlgorithmiaApi():
 
 @app.route("/openCvMethod", methods=['POST'])
 def callOpenCvMethod():
+
     modelPath = "/".join([APP_ROOT,"getModels.sh"])
     modelsDir = "/".join([APP_ROOT,"models"])
     if os.path.exists(modelsDir) is False:
@@ -71,7 +72,9 @@ def callTensorFlowMethod():
     file = request.files['tensorFlowImage']
     filePath =  "/".join([uploadFolder, file.filename])
     toWebPage = usingTensorFlow.tensorflowcaller(file, filePath, file.filename)
-    return render_template("home.html")
+    inputFolder = os.path.join('static', 'uploads')
+    input_image = os.path.join(inputFolder, os.path.split(filePath)[1])
+    return render_template("home.html",scrollToAnchor="TensorFlow", image_tensorflow = toWebPage[0], input_image2 = input_image, download2 = toWebPage[0], histogram_tensorflow = toWebPage[1])
 
 
 

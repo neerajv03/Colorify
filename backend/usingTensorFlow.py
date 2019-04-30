@@ -9,5 +9,5 @@ def tensorflowcaller(file, filePath, fileName):
     logger.info(filePath)
     logger.info(fileName)
     logger.info(file)
-    #file.save(filepath)
+    file.save(filePath)
     return colorizeImagetf.usingTensorFlow(filePath, fileName)

@@ -201,6 +201,13 @@
               <span class="btn btn-default btn-file">
                   <img id="fromtensorflow" src="{{ image_tensorflow }}" alt="We are fetching your image" height="300px" width="400px"/>
                 </span>
+          <p style="margin-top: 50%; margin-left: 30%; font-size: medium" >
+            <a class="btn btn-danger" role="button" download="colorized_image" href={{download2}} style="text-decoration: none; color: black">
+              Download
+            </a>
+
+
+          </p>
         </div>
         <br>
       </div>
@@ -221,6 +228,13 @@
         <p style="margin-left: 8%">Histogram Comparison</p>
         <span class="btn btn-default btn-file">
           <img id="hist" src="{{ histogram_open_cv }}" alt="Processing the Metrics" height="300px" width="400px"/>
+        </span>
+
+      </div>
+      <div class="column">
+        <p style="margin-left: 8%">Histogram Comparison</p>
+        <span class="btn btn-default btn-file">
+          <img id="hist1" src="{{ histogram_tensorflow }}" alt="Processing the Metrics" height="300px" width="400px"/>
         </span>
 
       </div>
