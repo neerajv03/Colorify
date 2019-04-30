@@ -1,4 +1,4 @@
-img{
+.column img{
     object-fit: cover;
     border-radius: 8px;
     border: wheat;
@@ -32,6 +32,7 @@ img{
     max-height:500px;
     min-height:21%;
 }
+
 
 #row input{
     display: inline-block;
