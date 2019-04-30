@@ -58,10 +58,10 @@ body {
 }
 
 
-a {
-    text-decoration: none;
-    color: white;
-}
+/*a {*/
+    /*text-decoration: none;*/
+    /*color: white;*/
+/*}*/
 
 ul, li {
     list-style-type: none;

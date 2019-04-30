@@ -41,7 +41,7 @@ def callAlgorithmiaApi():
     inputFolder = os.path.join('static', 'uploads')
     input_image = os.path.join(inputFolder, os.path.split(filePath)[1])
     logger.info("input: "+input_image)
-    return render_template("home.html", scrollToAnchor="UsingAlgorithmia", user_image = toWebPage, input_image = input_image)
+    return render_template("home.html", scrollToAnchor="UsingAlgorithmia", user_image = toWebPage, download = toWebPage, input_image = input_image)
 
 @app.route("/openCvMethod", methods=['POST'])
 def callOpenCvMethod():
@@ -61,7 +61,7 @@ def callOpenCvMethod():
     print("output: "+toWebPage[0])
     print("graph: "+toWebPage[1])
 
-    return render_template("home.html",scrollToAnchor="UsingOpenCV", image_opencv = toWebPage[0], input_image1 = input_image, histogram_open_cv = toWebPage[1])
+    return render_template("home.html",scrollToAnchor="UsingOpenCV", image_opencv = toWebPage[0], input_image1 = input_image, download1 = toWebPage[0], histogram_open_cv = toWebPage[1])
 
 
 
