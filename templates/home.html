@@ -21,6 +21,13 @@
 
   <!-- Added to fix favicon.ico 404 Error, from Stack Overflow -->
   <link rel="shortcut icon" href="">
+  {% if scrollToAnchor %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.location.hash = '#{{ scrollToAnchor }}';
+    });
+  </script>
+  {% endif %}
 
 </head>
 <body>
@@ -37,28 +44,28 @@
   <nav class="hide">
     <ul id="menu">
       <li data-menuanchor="home">
-        <a href="#home" title="Home">Home</a>
+        <a href="#home" title="Home" style="color: white">Home</a>
       </li>
-      <li data-menuanchor="Application Overview">
-        <a href="#ApplicationOverview" title="Application Overview">Application Overview</a>
-      </li>
+      <!--<li data-menuanchor="Application Overview">-->
+        <!--<a href="#ApplicationOverview" title="Application Overview">Application Overview</a>-->
+      <!--</li>-->
       <li data-menuanchor="Turing Test">
-        <a href="#TuringTest" title="Turing Test">Turing Test</a>
+        <a href="#TuringTest" title="Turing Test" style="text-decoration: none; color: white">Turing Test</a>
       </li>
       <li data-menuanchor="Using Algorithmia">
-        <a href="#UsingAlgorithmia" title="Using Algorithmia API">Using Algorithmia API</a>
+        <a href="#UsingAlgorithmia" title="Using Algorithmia API" style="text-decoration: none; color: white">Algorithmia API</a>
       </li>
       <li data-menuanchor="Using Open CV">
-        <a href="#UsingOpenCV" title="Open CV">Using Open CV</a>
+        <a href="#UsingOpenCV" title="Open CV" style="text-decoration: none; color: white">Open CV</a>
       </li>
-      <li data-menuanchor="Our Algorithm">
-        <a href="#OurAlgorithm" title="Our Algorithm">Our Algorithm</a>
+      <li data-menuanchor="Tensor Flow">
+        <a href="#TensorFlow" title="Tensor Flow" style="text-decoration: none; color: white">Tensor Flow</a>
       </li>
       <li data-menuanchor="Loss Visualization">
-        <a href="#LossVisualization" title="Loss Visualization">Loss Visualization</a>
+        <a href="#LossVisualization" title="Loss Visualization" style="text-decoration: none; color: white">Loss Visualization</a>
       </li>
       <li data-menuanchor="About">
-        <a href="#About" title="About">About</a>
+        <a href="#About" title="About" style="text-decoration: none; color: white">About</a>
       </li>
     </ul>
   </nav>
@@ -69,14 +76,14 @@
     <h1 style="text-align: center">Colorify</h1>
 
   </section>
-  <section class="vertical-scrolling">
-    <h2 style="text-align: center">Application Overview</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
-  </section>
+  <!--<section class="vertical-scrolling">-->
+    <!--<h2 style="text-align: center">Application Overview</h2>-->
+    <!--<p>-->
+      <!--Lorem, ipsum dolor sit amet consectetur adipisicing elit.-->
+      <!--Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,-->
+      <!--atque facere dolore repellendus fuga, tempora numquam ea a est ratione!-->
+    <!--</p>-->
+  <!--</section>-->
   <section class="vertical-scrolling">
     <h2 style="text-align: center">Turing Test</h2>
     <p>
@@ -97,7 +104,7 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah"  alt="Upload your Image" height="300px" width="400px"/>
+                  <img id="blah" src="{{ input_image }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
           <p style="margin-top: 50%; margin-left: 25%">
             <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
@@ -106,9 +113,17 @@
         </div>
 
         <div class="column">
-              <span class="btn btn-default btn-file">
+                <span class="btn btn-default btn-file">
+
                   <img id="fromApi" src="{{ user_image }}" alt="We are fetching your image" height="300px" width="400px"/>
                 </span>
+                <p style="margin-top: 50%; margin-left: 30%; font-size: medium" >
+                  <a class="btn btn-danger" role="button" download="colorized_image" href={{download}} style="text-decoration: none; color: black">
+                    Download
+                  </a>
+
+
+                </p>
         </div>
         <br>
       </div>
@@ -131,7 +146,7 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah1"  alt="Upload your Image" height="300px" width="400px"/>
+                  <img id="blah1" src="{{ input_image1 }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
           <p style="margin-top: 50%; margin-left: 25%">
             <input type='file' value="Choose File" onchange='readURL1(this);' name="openCVImage"/>
@@ -140,8 +155,21 @@
         </div>
         <div class="column">
               <span class="btn btn-default btn-file">
+
                   <img id="fromOpenCv" src="{{ image_opencv }}" alt="We are fetching your image" height="300px" width="400px"/>
-                </span>
+
+
+
+              </span>
+          <p style="margin-top: 50%; margin-left: 30%; font-size: medium" >
+            <a class="btn btn-danger" role="button" download="colorized_image" href={{download1}} style="text-decoration: none; color: black">
+              Download
+            </a>
+
+
+          </p>
+
+
         </div>
         <br>
       </div>
@@ -156,30 +184,79 @@
 
   </section>
   <section class="vertical-scrolling">
-    <h2 style="text-align: center">Our Algorithm</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
+    <h2 style="text-align: center">Tensor Flow</h2>
+    <form action="/tensorflowmethod" method="post" enctype="multipart/form-data">
+      <div  class="row">
+        <div class="column">
+
+                <span class="btn btn-default btn-file">
+                  <img id="blah2" src="{{ input_image2 }}" alt="Upload your Image" height="300px" width="400px"/>
+                </span>
+          <p style="margin-top: 50%; margin-left: 25%">
+            <input type='file' value="Choose File" onchange='readURL2(this);' name="tensorFlowImage"/>
+          </p>
+
+        </div>
+        <div class="column">
+              <span class="btn btn-default btn-file">
+                  <img id="fromtensorflow" src="{{ image_tensorflow }}" alt="We are fetching your image" height="300px" width="400px"/>
+                </span>
+          <p style="margin-top: 50%; margin-left: 30%; font-size: medium" >
+            <a class="btn btn-danger" role="button" download="colorized_image" href={{download2}} style="text-decoration: none; color: black">
+              Download
+            </a>
+
+
+          </p>
+        </div>
+        <br>
+      </div>
+
+      <div style="text-align: center; margin-top: 1%">
+
+        <input type="submit" value="Submit to Process" class="btn btn-primary" >
+      </div>
+
+
+    </form>
   </section>
 
   <section class="vertical-scrolling">
     <h2 style="text-align: center">Loss Visualization </h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
-    </p>
+    <div class="row">
+      <div class="column">
+        <p style="margin-left: 8%">Histogram Comparison</p>
+        <span class="btn btn-default btn-file">
+          <img id="hist" src="{{ histogram_open_cv }}" alt="Processing the Metrics" height="300px" width="400px"/>
+        </span>
+
+      </div>
+      <div class="column">
+        <p style="margin-left: 8%">Histogram Comparison</p>
+        <span class="btn btn-default btn-file">
+          <img id="hist1" src="{{ histogram_tensorflow }}" alt="Processing the Metrics" height="300px" width="400px"/>
+        </span>
+
+      </div>
+    </div>
   </section>
   <section class="vertical-scrolling">
     <h2 style="text-align: center">Meet the Team</h2>
+    <p style="text-align: center">
+      Professor Ronald Mak
+    <p style="text-align: center">
+      <a href="https://www.linkedin.com/in/ronaldmak/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.cs.sjsu.edu/~mak/"><i class="fa fa-link fa-4x" style="font-size: 36px; color:black"></i></a>
+
+
+    </p>
+    </p>
     <p style="text-align: left; margin-left: 5%">
       Neeraj Venugopal
     <p style="text-align: left; margin-left: 5%">
       <a href="https://www.linkedin.com/in/neerajvenugopal/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/Neeraj-Venugopal"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/neeraj.venugopal.7"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/Neeraj-Venugopal"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/neeraj.venugopal.7"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
     </p>
@@ -188,8 +265,8 @@
     <p style="text-align: right; margin-right: 5%">
 
       <a href="https://www.linkedin.com/in/harikabilluri/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/harika2506"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/harikabilluri"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/harika2506"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/harikabilluri"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
 
@@ -200,8 +277,8 @@
       Sai Sree Vaishnavi Chittoori
     <p style="text-align: left; margin-left: 5%">
       <a href="https://www.linkedin.com/in/sri-vaishnavi/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://github.com/sriivaishnavi"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/sri.vaishnavi.94"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/sriivaishnavi"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/sri.vaishnavi.94"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
     </p>
@@ -209,8 +286,8 @@
       Tanmay Raoji Shinde
     <p style="text-align: right; margin-right: 5%">
       <a href="https://www.linkedin.com/in/tanmay-shinde-921100118/"><i class="fa fa-linkedin-square fa-4x" style="font-size: 36px; color:black" ></i></a>
-      <a href="https://github.com/trshinde"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
-      <a href="https://www.facebook.com/tanmay.shinde.77"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://github.com/trshinde"><i class="fa fa-github-square fa-4x" style="font-size: 36px; color:black"></i></a>
+      <a href="https://www.facebook.com/tanmay.shinde.77"><i class="fa fa-facebook-square fa-4x" style="font-size: 36px; color:black"></i></a>
 
     </p>
     </p>

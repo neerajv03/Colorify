@@ -65,7 +65,8 @@ def colorifyimage(file,filepath,filename):
         img = img.convert("RGB")
 
         # saving the colored image to the result directory in static folder
-        result = os.path.join(resultFolder, filename)
+        output_filename = "colorized_algorithmia_"+filename
+        result = os.path.join(resultFolder, output_filename)
         print(result)
         img.save(result)
 

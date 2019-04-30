@@ -15,14 +15,14 @@ $(document).ready(function(){
 
     // fullpage customization
     $('#fullpage').fullpage({
-        sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#FDEBD0', '#5C832F', '#B8B89F', '#348899', '#F2AE72'],
+        sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#FDEBD0', '#B8B89F', '#348899', '#F2AE72'],
         sectionSelector: '.vertical-scrolling',
         slideSelector: '.horizontal-scrolling',
         navigation: true,
         slidesNavigation: true,
         css3: true,
         controlArrows: false,
-        anchors: ['home', 'ApplicationOverview', 'TuringTest', 'UsingAlgorithmia', 'UsingOpenCV', 'OurAlgorithm','LossVisualization','About'],
+        anchors: ['home',  'TuringTest', 'UsingAlgorithmia', 'UsingOpenCV', 'TensorFlow','LossVisualization','About'],
         menu: '#menu',
 
 
