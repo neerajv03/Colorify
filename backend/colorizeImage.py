@@ -10,7 +10,9 @@ import os
 import os.path
 import logging as logger
 import matplotlib.pyplot as plt
+import psutil
 logger.basicConfig(level=logger.INFO)
+
 
 resultFolder = os.path.join('static', 'result')
 histFolder = os.path.join('static', 'graphs')
@@ -106,9 +108,13 @@ def usingOpenCVMethod(filepath, fileName):
     plt.xlim([0,256])
     plt.savefig("static/graphs/histogram_open_cv.png")
     hist_image = os.path.join(histFolder, "histogram_open_cv.png")
+    cpu = psutil.cpu_percent()
+    mem=psutil.virtual_memory().percent
     res_list = []
     res_list.append(result)
     res_list.append(hist_image)
+    res_list.append(cpu)
+    res_list.append(mem)
 
     return res_list
 

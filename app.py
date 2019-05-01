@@ -62,7 +62,7 @@ def callOpenCvMethod():
     print("output: "+toWebPage[0])
     print("graph: "+toWebPage[1])
 
-    return render_template("home.html",scrollToAnchor="UsingOpenCV", image_opencv = toWebPage[0], input_image1 = input_image, download1 = toWebPage[0], histogram_open_cv = toWebPage[1])
+    return render_template("home.html",scrollToAnchor="UsingOpenCV", image_opencv = toWebPage[0], input_image1 = input_image, download1 = toWebPage[0], histogram = toWebPage[1], cpu = toWebPage[2], mem =toWebPage[3] )
 
 
 
@@ -74,7 +74,7 @@ def callTensorFlowMethod():
     toWebPage = usingTensorFlow.tensorflowcaller(file, filePath, file.filename)
     inputFolder = os.path.join('static', 'uploads')
     input_image = os.path.join(inputFolder, os.path.split(filePath)[1])
-    return render_template("home.html",scrollToAnchor="TensorFlow", image_tensorflow = toWebPage[0], input_image2 = input_image, download2 = toWebPage[0], histogram_tensorflow = toWebPage[1])
+    return render_template("home.html",scrollToAnchor="TensorFlow", image_tensorflow = toWebPage[0], input_image2 = input_image, download2 = toWebPage[0], histogram = toWebPage[1], cpu = toWebPage[2], mem =toWebPage[3])
 
 
 
