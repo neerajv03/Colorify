@@ -8,3 +8,9 @@
                 }
 4) Scroll Bar - https://alvarotrigo.com/fullPage/#page1
 5) https://medium.freecodecamp.org/colorize-b-w-photos-with-a-100-line-neural-network-53d9b4449f8d
+6) https://machinelearningmastery.com/save-load-keras-deep-learning-models/
+7) Heroku Deployment - https://devcenter.heroku.com/articles/git
+8) kaggle Datasets - https://www.kaggle.com/moltean/fruits
+9) More datasets - http://deeplearning.net/datasets/
+10) MNIST datasets - http://yann.lecun.com/exdb/mnist/
+11) Image Net Dataset - http://www.image-net.org/

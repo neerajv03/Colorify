@@ -17,6 +17,7 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 from skimage.color import rgb2lab, lab2rgb, rgb2gray
 from skimage.io import imsave
 from keras.models import model_from_json
+from keras import backend as kerasBackend
 import logging as logger
 logger.basicConfig(level=logger.INFO)
 
@@ -25,9 +26,14 @@ from PIL import Image
 
 resultFolder = os.path.join('static', 'result')
 histFolder = os.path.join('static', 'graphs')
+
 def usingTensorFlow(filepath, fileName):
     logger.info("inside tensor flow code")
     json_file = open('backend/TensorFlowModels/model.json', 'r')
+
+    # Launch the graph in a session.
+    session = tf.Session(config=tf.ConfigProto(allow_soft_placement=True,   log_device_placement=True))
+
     loaded_model_json = json_file.read()
     json_file.close()
     model = model_from_json(loaded_model_json)
@@ -51,13 +57,14 @@ def usingTensorFlow(filepath, fileName):
     color_me = rgb2lab(1.0/255*color_me)[:,:,:,0]
     color_me = color_me.reshape(color_me.shape+(1,))
 
-    # Test model
+    # Colorizing using the model here.
     output = model.predict(color_me)
     output = output * 128
 
     cur = np.zeros((256, 256, 3))
     cur[:,:,0] = color_me[0][:,:,0]
     cur[:,:,1:] = output[0]
+    kerasBackend.clear_session()
     imsave("static/result/colorized_tf_"+fileName, lab2rgb(cur))
 
     outputFile = 'static/result/' + 'colorized_tf_' + fileName
@@ -84,4 +91,6 @@ def usingTensorFlow(filepath, fileName):
     res_list.append(hist_image)
     res_list.append(str(cpu))
     res_list.append(str(mem))
+
+    session.close() 
     return res_list
