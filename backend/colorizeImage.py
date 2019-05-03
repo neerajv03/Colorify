@@ -1,8 +1,3 @@
-# This code is written by Sunita Nayak at BigVision LLC. It is based on the OpenCV project.
-# It is subject to the license terms in the LICENSE file found in this distribution and at http://opencv.org/license.html
-
-#### Usage example: python3 colorize.py --input greyscaleImage.png
-
 import numpy as np
 import cv2 as cv
 import argparse
@@ -13,22 +8,9 @@ import matplotlib.pyplot as plt
 import psutil
 logger.basicConfig(level=logger.INFO)
 
-
 resultFolder = os.path.join('static', 'result')
 histFolder = os.path.join('static', 'graphs')
-"""
- citation
- This Section of the code is in refrence to the link from learnopencv from github
- https://github.com/spmallick/learnopencv.git
 
- This Part of the code uses the model defined below
- @inproceedings{zhang2016colorful,
-  title={Colorful Image Colorization},
-  author={Zhang, Richard and Isola, Phillip and Efros, Alexei A},
-  booktitle={ECCV},
-  year={2016}
-}
-"""
 def usingOpenCVMethod(filepath, fileName):
     # parser = argparse.ArgumentParser(description='Colorize GreyScale Image')
     # parser.add_argument('--input', help='Path to image.')
@@ -48,13 +30,11 @@ def usingOpenCVMethod(filepath, fileName):
 
     # Specify the paths for the 2 model files
     protoFile = "models/colorization_deploy_v2.prototxt"
-    #weightsFile = "models/colorization_release_v2.caffemodel"
     weightsFile = "models/colorization_release_v2_norebal.caffemodel"
 
     logger.info(os.path)
     logger.info("Is Protofile Present in Path: %s", protoFile)
     logger.info(os.path.isfile(protoFile))
-
     logger.info("Is Wrights File Present in Path: %s", weightsFile)
     logger.info(os.path.isfile(weightsFile))
 
@@ -94,10 +74,9 @@ def usingOpenCVMethod(filepath, fileName):
     logger.info('Colorized image saved as '+ outputFile)
 
     fileName = outputFile.split('/')[2]
-    # logger.info(outputFile)
+    logger.info(outputFile)
 
     result = os.path.join(resultFolder, fileName)
-
     img = cv.imread(filepath,1)
     hist = cv.calcHist([img],[0],None,[256],[0,256])
     plt.plot(hist)
@@ -118,3 +97,16 @@ def usingOpenCVMethod(filepath, fileName):
 
     return res_list
 
+"""
+ citation
+ This Section of the code is in refrence to the link from learnopencv from github
+ https://github.com/spmallick/learnopencv.git
+
+ This Part of the code uses the model defined below
+ @inproceedings{zhang2016colorful,
+  title={Colorful Image Colorization},
+  author={Zhang, Richard and Isola, Phillip and Efros, Alexei A},
+  booktitle={ECCV},
+  year={2016}
+}
+"""
