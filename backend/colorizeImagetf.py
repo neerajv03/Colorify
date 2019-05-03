@@ -82,6 +82,6 @@ def usingTensorFlow(filepath, fileName):
     res_list = []
     res_list.append(result)
     res_list.append(hist_image)
-    res_list.append(cpu)
-    res_list.append(mem)
+    res_list.append(str(cpu))
+    res_list.append(str(mem))
     return res_list
