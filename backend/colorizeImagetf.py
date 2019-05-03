@@ -6,6 +6,7 @@ import os.path
 import keras
 import random
 import tensorflow as tf
+import psutil
 import matplotlib.pyplot as plt
 from keras.layers import Conv2D, Conv2DTranspose, UpSampling2D
 from keras.layers import Activation, Dense, Dropout, Flatten, InputLayer
@@ -76,9 +77,11 @@ def usingTensorFlow(filepath, fileName):
     plt.xlim([0,256])
     plt.savefig("static/graphs/histogram_tensorflow.png")
     hist_image = os.path.join(histFolder, "histogram_tensorflow.png")
+    cpu = psutil.cpu_percent()
+    mem=psutil.virtual_memory().percent
     res_list = []
     res_list.append(result)
     res_list.append(hist_image)
-
+    res_list.append(cpu)
+    res_list.append(mem)
     return res_list
-    

@@ -11,6 +11,8 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yatra+One|Ubuntu|Tangerine|Playfair+Display">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+
   <!-- js files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
@@ -26,8 +28,18 @@
     document.addEventListener("DOMContentLoaded", function() {
       document.location.hash = '#{{ scrollToAnchor }}';
     });
+
+
   </script>
   {% endif %}
+
+
+
+  <style>
+    .mySlides {display:none;}
+    .w3-content{margin-left:auto;margin-right:auto;max-width:980px}
+    .w3-section{margin-top:16px!important;margin-bottom:16px!important}
+  </style>
 
 </head>
 <body>
@@ -44,13 +56,13 @@
   <nav class="hide">
     <ul id="menu">
       <li data-menuanchor="home">
-        <a href="#home" title="Home" style="color: white">Home</a>
+        <a href="#home" title="Home" style="text-decoration: none; color: white">Home</a>
       </li>
       <!--<li data-menuanchor="Application Overview">-->
         <!--<a href="#ApplicationOverview" title="Application Overview">Application Overview</a>-->
       <!--</li>-->
-      <li data-menuanchor="Turing Test">
-        <a href="#TuringTest" title="Turing Test" style="text-decoration: none; color: white">Turing Test</a>
+      <li data-menuanchor="Application Overview">
+        <a href="#ApplicationOverview" title="Application Overview" style="text-decoration: none; color: white">Application Overview</a>
       </li>
       <li data-menuanchor="Using Algorithmia">
         <a href="#UsingAlgorithmia" title="Using Algorithmia API" style="text-decoration: none; color: white">Algorithmia API</a>
@@ -61,8 +73,8 @@
       <li data-menuanchor="Tensor Flow">
         <a href="#TensorFlow" title="Tensor Flow" style="text-decoration: none; color: white">Tensor Flow</a>
       </li>
-      <li data-menuanchor="Loss Visualization">
-        <a href="#LossVisualization" title="Loss Visualization" style="text-decoration: none; color: white">Loss Visualization</a>
+      <li data-menuanchor="Metrics">
+        <a href="#Metrics" title="Metrics" style="text-decoration: none; color: white">Metrics</a>
       </li>
       <li data-menuanchor="About">
         <a href="#About" title="About" style="text-decoration: none; color: white">About</a>
@@ -85,12 +97,40 @@
     <!--</p>-->
   <!--</section>-->
   <section class="vertical-scrolling">
-    <h2 style="text-align: center">Turing Test</h2>
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Vel at minus quidem reprehenderit officia adipisci architecto voluptate sint rerum,
-      atque facere dolore repellendus fuga, tempora numquam ea a est ratione!
+      <h2 style="text-align: center">Application Overview</h2>
+      <p style="text-align: center; font-size: xx-large">
+        Colorize the black and white images using Algorithmia, OpenCV and Tensor Flow.....
+      </p>
+
     </p>
+
+    <p>
+      <div class="w3-content w3-section" style="max-width:500px;">
+        <img class="mySlides" src="/static/overviewImages/sample.png" style="width:100%; text-align: center">
+        <img class="mySlides" src="/static/overviewImages/flower.png" style="width:100%; text-align: center">
+        <img class="mySlides" src="/static/overviewImages/fox.png" style="width:100%; text-align: center">
+        <img class="mySlides" src="/static/overviewImages/pineapple.png" style="width:100%; text-align: center">
+      </div>
+      <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          console.log(x[0]);
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+      </script>
+    </p>
+
   </section>
 
   <section class="vertical-scrolling">
@@ -222,22 +262,27 @@
   </section>
 
   <section class="vertical-scrolling">
-    <h2 style="text-align: center">Loss Visualization </h2>
+    <h2 style="text-align: center">Metrics</h2>
     <div class="row">
       <div class="column">
         <p style="margin-left: 8%">Histogram Comparison</p>
         <span class="btn btn-default btn-file">
-          <img id="hist" src="{{ histogram_open_cv }}" alt="Processing the Metrics" height="300px" width="400px"/>
+          <img id="hist" src="{{ histogram }}" alt="Processing the Metrics" height="300px" width="400px"/>
+        </span>
+        <span style="margin-left: 4%">
+          <h3 style="font-size: xx-large;">CPU UTILIZATION : {{cpu}} %</h3>
+          <h3 style="font-size: xx-large;">MEMORY UTILIZATION : {{mem}} %</h3>
         </span>
 
-      </div>
-      <div class="column">
-        <p style="margin-left: 8%">Histogram Comparison</p>
-        <span class="btn btn-default btn-file">
-          <img id="hist1" src="{{ histogram_tensorflow }}" alt="Processing the Metrics" height="300px" width="400px"/>
-        </span>
 
       </div>
+      <!--<div class="column">-->
+        <!--<p style="margin-left: 8%">Histogram Comparison</p>-->
+        <!--<span class="btn btn-default btn-file">-->
+          <!--<img id="hist1" src="{{ histogram_tensorflow }}" alt="Processing the Metrics" height="300px" width="400px"/>-->
+        <!--</span>-->
+
+      <!--</div>-->
     </div>
   </section>
   <section class="vertical-scrolling">

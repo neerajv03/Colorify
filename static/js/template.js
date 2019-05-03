@@ -22,7 +22,7 @@ $(document).ready(function(){
         slidesNavigation: true,
         css3: true,
         controlArrows: false,
-        anchors: ['home',  'TuringTest', 'UsingAlgorithmia', 'UsingOpenCV', 'TensorFlow','LossVisualization','About'],
+        anchors: ['home',  'ApplicationOverview', 'UsingAlgorithmia', 'UsingOpenCV', 'TensorFlow','Metrics','About'],
         menu: '#menu',
 
 
