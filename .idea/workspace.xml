@@ -8,8 +8,11 @@
       <change afterPath="$PROJECT_DIR$/static/overviewImages/sample.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/pts_in_hull.npy" beforeDir="false" />
 =======
+=======
+>>>>>>> 1a8772ed36c43b96f9d1075ec5c8241f0e20e054
       <change beforePath="$PROJECT_DIR$/static/css/imagePreview.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/imagePreview.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/template.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
@@ -33,12 +36,17 @@
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="-1811">
               <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
 =======
             <state relative-caret-position="160">
               <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
 >>>>>>> parent of 06823b1... metricsUI
+=======
+            <state relative-caret-position="160">
+              <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
+>>>>>>> 1a8772ed36c43b96f9d1075ec5c8241f0e20e054
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -212,10 +220,14 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="56599000" />
 =======
     <option name="totallyTimeSpent" value="51669000" />
 >>>>>>> parent of 06823b1... metricsUI
+=======
+    <option name="totallyTimeSpent" value="51669000" />
+>>>>>>> 1a8772ed36c43b96f9d1075ec5c8241f0e20e054
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -229,7 +241,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49659863" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -240,7 +252,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913166" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32913166" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32771084" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -393,12 +405,17 @@
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="-1811">
           <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
 =======
         <state relative-caret-position="160">
           <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
 >>>>>>> parent of 06823b1... metricsUI
+=======
+        <state relative-caret-position="160">
+          <caret line="103" column="39" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
+>>>>>>> 1a8772ed36c43b96f9d1075ec5c8241f0e20e054
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
