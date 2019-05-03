@@ -97,7 +97,7 @@
     <!--</p>-->
   <!--</section>-->
   <section class="vertical-scrolling">
-<<<<<<< HEAD
+
     <p>
       <h2 style="text-align: center">Application Overview</h2>
       <p style="text-align: center; font-size: xx-large">
@@ -132,35 +132,7 @@
       </script>
     </p>
 
-=======
-    <h2 style="text-align: center">Application Overview</h2>
-    <p style="text-align: center; font-size: xx-large">
-      Colorize the black and white images using Algorithmia, OpenCV and Tensor Flow.....
-    </p>
-    <div class="w3-content w3-section" style="max-width:500px;">
-      <img class="mySlides" src="/static/overviewImages/sample.png" style="width:100%; text-align: center">
-      <img class="mySlides" src="/static/overviewImages/flower.png" style="width:100%; text-align: center">
-      <img class="mySlides" src="/static/overviewImages/fox.png" style="width:100%; text-align: center">
-      <img class="mySlides" src="/static/overviewImages/pineapple.png" style="width:100%; text-align: center">
-    </div>
-    <script>
-      var myIndex = 0;
-      carousel();
 
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        console.log(x[0]);
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}
-        x[myIndex-1].style.display = "block";
-        setTimeout(carousel, 2000); // Change image every 2 seconds
-      }
-    </script>
->>>>>>> 1a8772ed36c43b96f9d1075ec5c8241f0e20e054
   </section>
 
   <section class="vertical-scrolling">
@@ -174,9 +146,9 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah" src="{{ input_image }}" alt="Upload your Image" height="300px" width="400px"/>
+                  <img style="margin-left: 25%" id="blah" src="{{ input_image }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
-          <p style="margin-top: 50%; margin-left: 25%">
+          <p style="margin-top: 50%; margin-left: 50%">
             <input type='file' value="Choose File" onchange='readURL(this);' name="image"/>
           </p>
 
@@ -216,9 +188,9 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah1" src="{{ input_image1 }}" alt="Upload your Image" height="300px" width="400px"/>
+                  <img style="margin-left: 25%" id="blah1" src="{{ input_image1 }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
-          <p style="margin-top: 50%; margin-left: 25%">
+          <p style="margin-top: 50%; margin-left: 50%">
             <input type='file' value="Choose File" onchange='readURL1(this);' name="openCVImage"/>
           </p>
 
@@ -260,9 +232,9 @@
         <div class="column">
 
                 <span class="btn btn-default btn-file">
-                  <img id="blah2" src="{{ input_image2 }}" alt="Upload your Image" height="300px" width="400px"/>
+                  <img style="margin-left: 25%" id="blah2" src="{{ input_image2 }}" alt="Upload your Image" height="300px" width="400px"/>
                 </span>
-          <p style="margin-top: 50%; margin-left: 25%">
+          <p style="margin-top: 50%; margin-left: 50%">
             <input type='file' value="Choose File" onchange='readURL2(this);' name="tensorFlowImage"/>
           </p>
 
@@ -300,8 +272,8 @@
           <img id="hist" src="{{ histogram }}" alt="Processing the Metrics" height="300px" width="400px"/>
         </span>
         <span style="margin-left: 4%">
-          <h3 style="font-size: xx-large;">CPU UTILIZATION : {{cpu}} %</h3>
-          <h3 style="font-size: xx-large;">MEMORY UTILIZATION : {{mem}} %</h3>
+          <h3 style="font-size: xx-large;">CPU UTILIZATION : {{cpu}} </h3>
+          <h3 style="font-size: xx-large;">MEMORY UTILIZATION : {{mem}} </h3>
         </span>
 
 

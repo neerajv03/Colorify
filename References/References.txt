@@ -1,0 +1,10 @@
+1) Algorithmia - https://algorithmia.com/developers/clients/python
+2) OpenCV - https://github.com/spmallick/learnopencv/tree/master/Colorization
+3) TensorFlow - @inproceedings{zhang2016colorful,
+                  title={Colorful Image Colorization},
+                  author={Zhang, Richard and Isola, Phillip and Efros, Alexei A},
+                  booktitle={ECCV},
+                  year={2016}
+                }
+4) Scroll Bar - https://alvarotrigo.com/fullPage/#page1
+5) https://medium.freecodecamp.org/colorize-b-w-photos-with-a-100-line-neural-network-53d9b4449f8d
